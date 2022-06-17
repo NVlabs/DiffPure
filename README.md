@@ -11,17 +11,15 @@ Weili Nie, Brandon Guo, Yujia Huang, Chaowei Xiao, Arash Vahdat, Anima Anandkuma
 https://diffpure.github.io <br>
 
 Abstract: *Adversarial purification refers to a class of defense methods that remove adversarial perturbations using a
-generative model. These methods do not make assumptions on the form of attack and the classification model,
-and thus can defend pre-existing classifiers against unseen threats. However, their performance currently
-falls behind adversarial training methods. In this work, we propose <i>DiffPure</i> that uses diffusion
-models for adversarial purification: Given an adversarial example, we first diffuse it with a small amount
-of noise following a forward diffusion process, and then recover the clean image through a reverse
-generative process. To evaluate our method against strong adaptive attacks in an efficient and scalable way,
-we propose to use the adjoint method to compute full gradients of the reverse generative process. Extensive
-experiments on three image datasets including CIFAR-10, ImageNet and CelebA-HQ with three classifier
-architectures including ResNet, WideResNet and ViT demonstrate that our method achieves the state-of-the-art
-results, outperforming current adversarial training and adversarial purification methods, often by a large
-margin.*
+generative model. These methods do not make assumptions on the form of attack and the classification model, and thus can
+defend pre-existing classifiers against unseen threats. However, their performance currently falls behind adversarial
+training methods. In this work, we propose <i>DiffPure</i> that uses diffusion models for adversarial purification:
+Given an adversarial example, we first diffuse it with a small amount of noise following a forward diffusion process,
+and then recover the clean image through a reverse generative process. To evaluate our method against strong adaptive
+attacks in an efficient and scalable way, we propose to use the adjoint method to compute full gradients of the reverse
+generative process. Extensive experiments on three image datasets including CIFAR-10, ImageNet and CelebA-HQ with three
+classifier architectures including ResNet, WideResNet and ViT demonstrate that our method achieves the state-of-the-art
+results, outperforming current adversarial training and adversarial purification methods, often by a large margin.*
 
 ## Requirements
 
@@ -38,8 +36,8 @@ margin.*
 ## Data and pre-trained models
 
 Before running our code on ImageNet and CelebA-HQ, you have to first download these two datasets. For example, you can
-follow [the instructions to download CelebA-HQ](https://github.com/suvojit-0x55aa/celebA-HQ-dataset-download). Note
-that we use the LMDB format for ImageNet, so you may need
+follow [the instructions to download CelebA-HQ](https://github.com/suvojit-0x55aa/celebA-HQ-dataset-download). Note that
+we use the LMDB format for ImageNet, so you may need
 to [convert the ImageNet dataset to LMDB](https://github.com/Lyken17/Efficient-PyTorch/tree/master/tools). There is no
 need to download CIFAR-10 separately.
 
@@ -47,12 +45,16 @@ Note that you have to put all the datasets in the `datasest` directory.
 
 For the pre-trained diffusion models, you need to first download them from the following links:
 
-- Score SDE for CIFAR-10: https://github.com/yang-song/score_sde (`vp/cifar10_ddpmpp_deep_continuous`)
-- Guided Diffusion for ImageNet: https://github.com/openai/guided-diffusion (`256x256 diffusion unconditional`)
-- DDPM for CelebA-HQ: https://github.com/ermongroup/SDEdit (`CelebA-HQ`)
+- [Score SDE](https://github.com/yang-song/score_sde_pytorch) for
+  CIFAR-10: (`vp/cifar10_ddpmpp_deep_continuous`: [download link](https://drive.google.com/file/d/16_-Ahc6ImZV5ClUc0vM5Iivf8OJ1VSif/view?usp=sharing))
+- [Guided Diffusion](https://github.com/openai/guided-diffusion) for
+  ImageNet: (`256x256 diffusion unconditional`: [download link](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt))
+- [DDPM](https://github.com/ermongroup/SDEdit) for CelebA-HQ:  (`CelebA-HQ`: [download link](https://image-editing-test-12345.s3-us-west-2.amazonaws.com/checkpoints/celeba_hq.ckpt))
 
 For the pre-trained classifiers, most of them do not need to be downloaded separately, except for
-- `attribute classifiers` on CelebA-HQ: [download link](http://latent-composition.csail.mit.edu/other_projects/gan_ensembling/zips/pretrained_classifiers.zip)
+
+- `attribute classifiers` from [gan-ensembling](https://github.com/chail/gan-ensembling) on
+  CelebA-HQ: [download link](http://latent-composition.csail.mit.edu/other_projects/gan_ensembling/zips/pretrained_classifiers.zip)
 - `wideresnet-70-16` on CIFAR-10: TBD
 - `resnet-50` on CIFAR-10: TBD
 - `wrn-70-16-dropout` on CIFAR-10: TBD
@@ -167,8 +169,8 @@ Note that [seed_id] is used for getting error bars, and [data_id] is used for sa
 
 ## License
 
-Please check the [LICENSE](LICENSE) file. This work may be used non-commercially, meaning for research or evaluation purposes only.
-For business inquiries, please contact
+Please check the [LICENSE](LICENSE) file. This work may be used non-commercially, meaning for research or evaluation
+purposes only. For business inquiries, please contact
 [researchinquiries@nvidia.com](mailto:researchinquiries@nvidia.com).
 
 ## Citation
