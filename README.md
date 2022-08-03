@@ -25,7 +25,7 @@ results, outperforming current adversarial training and adversarial purification
 
 - 1-4 high-end NVIDIA GPUs with 32 GB of memory.
 - 64-bit Python 3.8.
-- CUDA=10.0 and docker must be installed first.
+- CUDA=11.0 and docker must be installed first.
 - Installation of the required library dependencies with Docker:
     ```bash
     docker build -f diffpure.Dockerfile --tag=diffpure:0.0.1 .
