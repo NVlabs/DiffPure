@@ -83,7 +83,12 @@ bash run_cifar_stand_inf_70-16-dp.sh [seed_id] [data_id]  # WideResNet-70-16
 bash run_cifar_stand_inf_rn50.sh [seed_id] [data_id]  # ResNet-50
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and eight seeds 
+(e.g., 0..7) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
+To measure the worse-case defense performance of our method, the reported robust accuracy is the minimum robust accuracy 
+of these two versions: `Rand` and `Standard`.
 
 ### AutoAttack L2
 
@@ -105,7 +110,12 @@ bash run_cifar_stand_L2_70-16-dp.sh [seed_id] [data_id]  # WideResNet-70-16
 bash run_cifar_stand_L2_rn50.sh [seed_id] [data_id]  # ResNet-50
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and eight seeds
+(e.g., 0..7) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
+To measure the worse-case defense performance of our method, the reported robust accuracy is the minimum robust accuracy
+of these two versions: `Rand` and `Standard`.
 
 ### StAdv
 
@@ -116,7 +126,11 @@ cd run_scripts/cifar10
 bash run_cifar_stadv_rn50.sh [seed_id] [data_id]  # ResNet-50
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and eight seeds
+(e.g., 0..7) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
+
 
 ### BPDA+EOT
 
@@ -127,7 +141,10 @@ cd run_scripts/cifar10
 bash run_cifar_bpda_eot.sh [seed_id] [data_id]  # WideResNet-28-10
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and five seeds
+(e.g., 0..4) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
 
 ## Run experiments on ImageNet
 
@@ -151,7 +168,12 @@ bash run_in_stand_inf_50-2.sh [seed_id] [data_id]  # WideResNet-50-2
 bash run_in_stand_inf_deits.sh [seed_id] [data_id]  # DeiT-S
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and 16 seeds
+(e.g., 0..15) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
+To measure the worse-case defense performance of our method, the reported robust accuracy is the minimum robust accuracy
+of these two versions: `Rand` and `Standard`.
 
 ## Run experiments on CelebA-HQ
 
@@ -165,7 +187,10 @@ bash run_celebahq_bpda_glasses.sh [seed_id] [data_id]  # the glasses attribute
 bash run_celebahq_bpda_smiling.sh [seed_id] [data_id]  # the smiling attribute
 ```
 
-Note that [seed_id] is used for getting error bars, and [data_id] is used for sampling a fixed set of images.
+Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
+
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and 64 seeds
+(e.g., 0..63) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
 
 ## License
 
