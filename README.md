@@ -55,9 +55,9 @@ For the pre-trained classifiers, most of them do not need to be downloaded separ
 
 - `attribute classifiers` from [gan-ensembling](https://github.com/chail/gan-ensembling) on
   CelebA-HQ: [download link](http://latent-composition.csail.mit.edu/other_projects/gan_ensembling/zips/pretrained_classifiers.zip)
-- `wideresnet-70-16` on CIFAR-10: TBD
-- `resnet-50` on CIFAR-10: TBD
-- `wrn-70-16-dropout` on CIFAR-10: TBD
+- `wideresnet-70-16` on CIFAR-10: [download link](https://drive.google.com/drive/folders/1OeuFx2r26xeHncs8bGuqgY6ns_N77Avi?usp=sharing)
+- `resnet-50` on CIFAR-10: [download link](https://drive.google.com/drive/folders/1SEGilIEAnx9OC1JVhmOynreCF3oog7Fi?usp=sharing)
+- `wrn-70-16-dropout` on CIFAR-10: [download link](https://drive.google.com/drive/folders/1istqcnPNXJ-TQFdxRqNJuInzOtlYOG1b?usp=sharing)
 
 Note that you have to put all the pretrained models in the `pretrained` directory.
 
