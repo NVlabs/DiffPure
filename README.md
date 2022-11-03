@@ -170,7 +170,7 @@ bash run_in_stand_inf_deits.sh [seed_id] [data_id]  # DeiT-S
 
 Note that `[seed_id]` is used for getting error bars, and `[data_id]` is used for sampling a fixed set of images.
 
-To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and 16 seeds
+To reproduce the numbers in the paper, we recommend using three seeds (e.g., 121..123) for `[seed_id]` and 32 seeds
 (e.g., 0..31) for `[data_id]`, and averaging all the results across `[seed_id]` and `[data_id]`, accordingly.
 To measure the worse-case defense performance of our method, the reported robust accuracy is the minimum robust accuracy
 of these two versions: `Rand` and `Standard`.
