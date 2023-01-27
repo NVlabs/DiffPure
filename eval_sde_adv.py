@@ -54,6 +54,7 @@ class SDE_Adv_Model(nn.Module):
         else:
             raise NotImplementedError('unknown diffusion type')
 
+        # use `counter` to record the the sampling time every 5 NFEs (note hardcode 5, and you can change the freq)
         self.register_buffer('counter', torch.zeros(1, device=config.device))
         self.tag = None
 
