@@ -72,6 +72,8 @@ class SDE_Adv_Model(nn.Module):
         self.register_buffer('counter', torch.zeros(1, device=config.device))
         self.tag = None
 
+    # use `counter` to record the the sampling time every 5 NFEs (note we hardcoded print freq to 5,
+    # and you may want to change the freq)
     def reset_counter(self):
         self.counter = torch.zeros(1, dtype=torch.int, device=config.device)
 
