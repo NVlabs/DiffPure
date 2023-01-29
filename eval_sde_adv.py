@@ -265,7 +265,7 @@ def parse_args_and_config():
     parser.add_argument('--sigma2', type=float, default=1e-3, help='LDSDE sigma2')
     parser.add_argument('--lambda_ld', type=float, default=1e-2, help='lambda_ld')
     parser.add_argument('--eta', type=float, default=5., help='LDSDE eta')
-    parser.add_argument('--step_size', type=float, default=1e-2, help='step size for ODE Euler method')
+    parser.add_argument('--step_size', type=float, default=1e-3, help='step size for ODE Euler method')
 
     # adv
     parser.add_argument('--domain', type=str, default='celebahq', help='which domain: celebahq, cat, car, imagenet')
@@ -278,7 +278,6 @@ def parse_args_and_config():
 
     parser.add_argument('--num_sub', type=int, default=1000, help='imagenet subset')
     parser.add_argument('--adv_eps', type=float, default=0.07)
-    # parser.add_argument('--gpu_ids', type=str, default='0')
 
     args = parser.parse_args()
 

@@ -232,7 +232,6 @@ def parse_args_and_config():
 
     parser.add_argument('--num_sub', type=int, default=1000, help='imagenet subset')
     parser.add_argument('--adv_eps', type=float, default=0.07)
-    # parser.add_argument('--gpu_ids', type=str, default='0')
 
     args = parser.parse_args()
 
